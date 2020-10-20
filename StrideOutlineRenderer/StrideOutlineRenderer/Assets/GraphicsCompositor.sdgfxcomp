@@ -130,7 +130,7 @@ SharedRenderers:
             87ff1d9cdd52418daf76385176a0e316: ref!! ecd95c95-ed89-49de-bd6f-7d75a511338f
             5e059d4cc2db4ee8a1f28a40f4ac3ae8: ref!! 06fbbe0d-2f57-4b10-a8ad-19157b55fdb2
         GBufferRenderStage: ref!! 895ba7e1-3bba-4b8b-bfde-ae18b5b39521
-        PostEffects*: !PostProcessingEffects ref!! 94522f89-4ed2-4e74-abdf-703308a73b29
+        PostEffects*: null
         LightShafts: null
         VRSettings:
             Enabled: false
@@ -221,6 +221,23 @@ SharedRenderers:
         SubsurfaceScatteringBlurEffect: null
         MSAALevel: None
         MSAAResolver: {}
+    3e92a36c510f7a5aba9cdd64a738f3cc*: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
+        Id: 3587e0b8-03f8-4e57-ae57-2c4135a8ffc7
+        Clear: null
+        LightProbes: true
+        OpaqueRenderStage: ref!! d092fe52-708d-4357-9433-3bfd30c3b13b
+        TransparentRenderStage: ref!! 4a9e701f-5494-47e2-b5a8-2824e2e6cb62
+        ShadowMapRenderStages: {}
+        GBufferRenderStage: ref!! 895ba7e1-3bba-4b8b-bfde-ae18b5b39521
+        PostEffects: !PostProcessingEffects ref!! 94522f89-4ed2-4e74-abdf-703308a73b29
+        LightShafts: null
+        VRSettings:
+            Enabled: false
+            RequiredApis: {}
+            Overlays: {}
+        SubsurfaceScatteringBlurEffect: null
+        MSAALevel: None
+        MSAAResolver: {}
 Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
     Id: 76fe87cf-f574-4ad6-85b8-e9a9586be0e2
     Camera: ref!! d5b84192-0728-44a2-b2ea-6b3a3ff90e79
@@ -235,20 +252,14 @@ Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
                     RenderTexture: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/OutlineRenderTexture
                     Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! d12cd24d-684c-498f-856e-4a1ff7d7f80f
                 RenderMask: Group10
-            b2fe1cc8cfdc1ee427a9e6207a62a15c*: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 141009f0-3d6d-429e-a6f5-3b7e71eed7aa
-            d1d0ecd193f9900286b713d67dcf7f03*: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
-                Id: 50b4d9af-e76e-4ad8-ba61-5ee63fb0c8f9
+            cb99fca9643ab9c74b748553b403d06e*: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+                Id: 0d73c394-b1d5-4d54-88ac-08b113339ca5
                 Camera: ref!! d5b84192-0728-44a2-b2ea-6b3a3ff90e79
-                Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 141009f0-3d6d-429e-a6f5-3b7e71eed7aa
+                Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 3587e0b8-03f8-4e57-ae57-2c4135a8ffc7
                 RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29
-            b74edfb12fb4842dca34ff28a0bf72e3*: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
-                Id: ff4028ed-de68-46c0-881b-c8cec570d5cd
-                Camera: ref!! d5b84192-0728-44a2-b2ea-6b3a3ff90e79
-                Child: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
-                    Id: fe347f5d-9607-4e0e-9ccb-e66f9de6587a
-                    RenderStage: ref!! 4a9e701f-5494-47e2-b5a8-2824e2e6cb62
-                RenderMask: Group30, Group31
-            1ba58f6995e569d23f8f6790820ae949*: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering ref!! 5079f536-6848-4ab2-9e14-a57fdcf806f1
+            2b4f0fb7f50a39e3a07c559bc00bd2f3*: !StrideOutlineRenderer.Renderers.OutlineRenderer,StrideOutlineRenderer
+                Id: 09063349-cb16-4868-a42a-55cd8b547480
+                OutlineRenderTarget: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/OutlineRenderTexture
             01d338078e9b21121ead0868932613dd: ~(Deleted)
             d39c5ddbf8b7d5ca02bafb6496b1cc3c: ~(Deleted)
     RenderMask: All

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Projects\StrideOutlineRenderer\StrideOutlineRenderer" t="IncludeFlat">
+      <e p="Bin" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="StrideOutlineRenderer" t="IncludeRecursive">
+        <e p="Assets" t="Include">
+          <e p="Environment" t="Include">
+            <e p="Skybox.sdsky" t="Include" />
+          </e>
+          <e p="GameSettings.sdgamesettings" t="Include" />
+          <e p="GraphicsCompositor.sdgfxcomp" t="Include" />
+          <e p="MainScene.sdscene" t="Include" />
+          <e p="Materials" t="Include">
+            <e p="Ground Material.sdmat" t="Include" />
+            <e p="Sphere Material.sdmat" t="Include" />
+          </e>
+          <e p="Models" t="Include">
+            <e p="Ground.sdpromodel" t="Include" />
+            <e p="Sphere.sdpromodel" t="Include" />
+          </e>
+          <e p="Textures" t="Include">
+            <e p="OutlineRenderTexture.sdrendertex" t="Include" />
+            <e p="Skybox texture.sdtex" t="Include" />
+          </e>
+          <e p="UIPages" t="Include">
+            <e p="UiPage.sduipage" t="Include" />
+          </e>
+        </e>
+        <e p="BasicCameraController.cs" t="Include" />
+        <e p="Bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="StrideOutlineRenderer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Renderers" t="Include">
+          <e p="OutlineRenderer.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="skybox_texture_hdr.dds" t="Include" />
+        </e>
+        <e p="StrideOutlineRenderer.csproj" t="IncludeRecursive" />
+        <e p="StrideOutlineRenderer.sdpkg" t="Include" />
+      </e>
+      <e p="StrideOutlineRenderer.sln" t="IncludeFlat" />
+      <e p="StrideOutlineRenderer.Windows" t="IncludeRecursive">
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="StrideOutlineRenderer.Windows.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Icon.ico" t="Include" />
+        </e>
+        <e p="StrideOutlineRenderer.Windows.csproj" t="IncludeRecursive" />
+        <e p="StrideOutlineRenderer.Windows.sdpkg" t="Include" />
+        <e p="StrideOutlineRendererApp.cs" t="Include" />
+        <e p="x64" t="Include" />
+        <e p="x86" t="Include" />
+      </e>
+    </e>
+    <e p="C:\Users\jerem\.nuget\packages\stride.audio\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0" t="Include">
+      <e p="Stride.Audio.ssdeps" t="Include" />
+      <e p="x64\libstrideaudio.dll" t="Include" />
+      <e p="x86\libstrideaudio.dll" t="Include" />
+    </e>
+    <e p="C:\Users\jerem\.nuget\packages\stride.core\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Stride.Core.ssdeps" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.core\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\x64\libcore.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.core\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\x86\libcore.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.graphics\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11" t="Include">
+      <e p="Stride.Graphics.ssdeps" t="Include" />
+      <e p="x64\freetype.dll" t="Include" />
+      <e p="x64\SDL2.dll" t="Include" />
+      <e p="x86\freetype.dll" t="Include" />
+      <e p="x86\SDL2.dll" t="Include" />
+    </e>
+    <e p="C:\Users\jerem\.nuget\packages\stride.native\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Stride.Native.ssdeps" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.native\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\x64\libstride.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.native\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\x86\libstride.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.navigation\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Stride.Navigation.ssdeps" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.navigation\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\x64\libstridenavigation.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.navigation\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\x86\libstridenavigation.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.physics\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Stride.Physics.ssdeps" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.physics\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\x64\libbulletc.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.physics\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\x86\libbulletc.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.shaders.compiler\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\glslangValidator.exe" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.shaders.compiler\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\Stride.Shaders.Compiler.ssdeps" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.shaders.compiler\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\d3dcompiler_47.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.shaders.compiler\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\d3dcompiler_47.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\Stride.Video.ssdeps" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\avcodec-57.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\avdevice-57.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\avfilter-6.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\avformat-57.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\avutil-55.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\swresample-2.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\swscale-4.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\avcodec-57.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\avdevice-57.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\avfilter-6.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\avformat-57.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\avutil-55.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\swresample-2.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.video\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\swscale-4.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.virtualreality\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\Stride.VirtualReality.ssdeps" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.virtualreality\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\libstridevr.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.virtualreality\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x64\openvr_api.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.virtualreality\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\libstridevr.dll" t="Include" />
+    <e p="C:\Users\jerem\.nuget\packages\stride.virtualreality\4.0.0.1-beta04-1265\runtimes\win\lib\netstandard2.0\Direct3D11\x86\openvr_api.dll" t="Include" />
+    <e p="C:\Users\jerem\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\jerem\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_StrideOutlineRenderer.1782899299.00" t="ExcludeRecursive" />
+  </component>
+</project>
