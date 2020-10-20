@@ -31,7 +31,7 @@ namespace StrideOutlineRenderer.Renderers
 
             // TODO adjust for offset
             spriteBatch.Draw(OutlineRenderTarget, Vector2.Zero, Color.Red, 0, Vector2.Zero,2);
-            //spriteBatch.Draw(OutlineRenderTarget, Vector2.Zero);
+            spriteBatch.Draw(OutlineRenderTarget, Vector2.Zero);
             spriteBatch.End();
         }
 
