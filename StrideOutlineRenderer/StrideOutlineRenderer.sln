@@ -1,0 +1,11 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+VisualStudioVersion = 16.0.0.0
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrideOutlineRenderer.Windows", "StrideOutlineRenderer.Windows\StrideOutlineRenderer.Windows.csproj", "{0A361411-915A-4333-B7CD-EE716006CF38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrideOutlineRenderer", "StrideOutlineRenderer\StrideOutlineRenderer.csproj", "{C980ACAB-0764-4EA3-B728-C9B87261DB29}"
+EndProject
+Global
+EndGlobal
