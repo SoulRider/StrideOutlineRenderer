@@ -156,7 +156,7 @@ SharedRenderers:
         Bloom:
             Enabled*: true
             Radius*: 10.0
-            Amount*: 2.0
+            Amount*: 0.25
             Distortion: {X: 1.0, Y: 1.0}
             Afterimage:
                 Enabled: false
@@ -215,6 +215,25 @@ SharedRenderers:
         SubsurfaceScatteringBlurEffect: null
         MSAALevel: None
         MSAAResolver: {}
+    81b6be4addcb0a1af442af56a37ad188*: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
+        Id: 07e35bdb-8038-4172-82ac-f4b0e72dc7e4
+        Clear:
+            Id: 48d9af80-a70c-411c-985a-fa3fde03a992
+            Color: {R: 0.0, G: 0.0, B: 0.0, A: 0.0}
+        LightProbes: true
+        OpaqueRenderStage: ref!! d092fe52-708d-4357-9433-3bfd30c3b13b
+        TransparentRenderStage: ref!! 4a9e701f-5494-47e2-b5a8-2824e2e6cb62
+        ShadowMapRenderStages: {}
+        GBufferRenderStage: ref!! 895ba7e1-3bba-4b8b-bfde-ae18b5b39521
+        PostEffects: !PostProcessingEffects ref!! 94522f89-4ed2-4e74-abdf-703308a73b29
+        LightShafts: null
+        VRSettings:
+            Enabled: false
+            RequiredApis: {}
+            Overlays: {}
+        SubsurfaceScatteringBlurEffect: null
+        MSAALevel: None
+        MSAAResolver: {}
     ee80a20a9bd99f2d70711114e15fe7ca: ~(Deleted)
     60459475d3a3adaf2d1ba5d99913ca75: ~(Deleted)
 Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
@@ -240,10 +259,13 @@ Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
                 Id: 6d662952-2b89-4ab6-b368-9dd5de44f6c1
                 InputRenderTexture: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/InputRenderTexture
                 OutputRenderTexture: 70c633ac-86b5-49ab-b613-b58d14675e80:Textures/OutputRenderTexture
-                Scale: 1.0065
+                Scale: 1.01
                 Color: {R: 0, G: 255, B: 0, A: 255}
-                OffsetVertical: 3.0
-                OffsetHorizontal: 3.0
+            c5b4ba745ae8d0a9b00308cb3e8f01ef*: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+                Id: e6912fc5-18b5-4ad3-95fa-0b6e787ab1c0
+                Camera: ref!! d5b84192-0728-44a2-b2ea-6b3a3ff90e79
+                Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 07e35bdb-8038-4172-82ac-f4b0e72dc7e4
+                RenderMask: All
             01d338078e9b21121ead0868932613dd: ~(Deleted)
             d39c5ddbf8b7d5ca02bafb6496b1cc3c: ~(Deleted)
     RenderMask: All

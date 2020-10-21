@@ -10,10 +10,12 @@ namespace StrideOutlineRenderer.Renderers
     {
         private readonly Color4 transparent = new Color4(0, 0, 0, 0);
 
-        [Display(category: "Rendering")] public Texture OutlineRenderTarget;
+        [Display(category: "Rendering")] public Texture InputRenderTexture;
+        [Display(category: "Rendering")] public Texture OutputRenderTexture;
         public override void Update()
         {
-            Game.GraphicsContext.CommandList.Clear(OutlineRenderTarget, transparent);
+            Game.GraphicsContext.CommandList.Clear(InputRenderTexture, transparent);
+            Game.GraphicsContext.CommandList.Clear(OutputRenderTexture, transparent);
         }
     }
 }
