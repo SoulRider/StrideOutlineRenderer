@@ -130,7 +130,7 @@ SharedRenderers:
             61b557b74893400898c007d5ece5e87f: ref!! ecd95c95-ed89-49de-bd6f-7d75a511338f
             5c382f66ee524c498d26d9aaf19fc9c3: ref!! 06fbbe0d-2f57-4b10-a8ad-19157b55fdb2
         GBufferRenderStage: ref!! 895ba7e1-3bba-4b8b-bfde-ae18b5b39521
-        PostEffects*: !PostProcessingEffects ref!! 94522f89-4ed2-4e74-abdf-703308a73b29
+        PostEffects*: null
         LightShafts: null
         VRSettings:
             Enabled: false
@@ -156,7 +156,7 @@ SharedRenderers:
         Bloom:
             Enabled*: true
             Radius*: 10.0
-            Amount*: 0.3
+            Amount*: 2.0
             Distortion: {X: 1.0, Y: 1.0}
             Afterimage:
                 Enabled: false
@@ -169,7 +169,7 @@ SharedRenderers:
             Enabled*: true
             Transforms:
                 1e06f805f8b2e949a06c30d45fe413ef: !ToneMap
-                    Enabled*: false
+                    Enabled*: true
                     Operator: !ToneMapHejl2Operator {}
                     AutoKeyValue*: true
                 c57351444609d14ea258b3f511ec8a74: !FilmGrain
@@ -206,7 +206,7 @@ SharedRenderers:
         TransparentRenderStage: ref!! 4a9e701f-5494-47e2-b5a8-2824e2e6cb62
         ShadowMapRenderStages: {}
         GBufferRenderStage: ref!! 895ba7e1-3bba-4b8b-bfde-ae18b5b39521
-        PostEffects: !PostProcessingEffects ref!! 94522f89-4ed2-4e74-abdf-703308a73b29
+        PostEffects: null
         LightShafts: null
         VRSettings:
             Enabled: false
