@@ -9,29 +9,11 @@ Hierarchy:
         - !Grid ref!! a91162a1-b0a4-4b58-9b58-7c70a7855dfe
     Parts:
         -   UIElement: !ImageElement
-                Id: 43537dbe-96a6-4f99-a901-50b964653b4e
+                Id: a46e17a7-a08a-4e35-939c-7386c65e4ad4
                 DependencyProperties:
-                    7fe75cb963d9daf36eece3e20393df41~Panel.ZIndexPropertyKey: 1
+                    7fe75cb963d9daf36eece3e20393df41~Panel.ZIndexPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Visibility: Hidden
-                Width: 0.0
-                Height: 0.0
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Source: !SpriteFromTexture
-                    Texture: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/InputRenderTexture
-                    Center: {X: 0.0, Y: 0.0}
-                Color: {R: 121, G: 121, B: 121, A: 255}
-                StretchType: None
-        -   UIElement: !ImageElement
-                Id: 7ea1fbde-5534-4e69-acbf-f77e1b473666
-                DependencyProperties:
-                    7fe75cb963d9daf36eece3e20393df41~Panel.ZIndexPropertyKey: 2
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 0.0
                 Height: 0.0
                 HorizontalAlignment: Center
@@ -52,8 +34,7 @@ Hierarchy:
                 Margin: {}
                 Children:
                     db8fa821d0c8f378d6f47689196e1b72: !ImageElement ref!! c1433a5c-c21d-409e-854c-d0012792c00a
-                    d01d6fdeddba475690c2e8fd3cd0a32a: !ImageElement ref!! 43537dbe-96a6-4f99-a901-50b964653b4e
-                    ae373228aae38088a4b0a9d476654fe6: !ImageElement ref!! 7ea1fbde-5534-4e69-acbf-f77e1b473666
+                    7873680dfe8cfb0a76e5445bf291a299: !ImageElement ref!! a46e17a7-a08a-4e35-939c-7386c65e4ad4
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
