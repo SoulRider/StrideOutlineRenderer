@@ -196,25 +196,6 @@ SharedRenderers:
         SubsurfaceScatteringBlurEffect: null
         MSAALevel: None
         MSAAResolver: {}
-    22ac779d1b6a8efd8f1339a2c4622386*: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
-        Id: 0d46ff52-37a4-4be0-974e-d5667409ee0b
-        Clear:
-            Id: 71582abd-0f3f-403d-a641-53fe020df0d9
-            Color: {R: 0.40392157, G: 0.4117647, B: 0.43529412, A: 1.0}
-        LightProbes: true
-        OpaqueRenderStage: ref!! d092fe52-708d-4357-9433-3bfd30c3b13b
-        TransparentRenderStage: ref!! 4a9e701f-5494-47e2-b5a8-2824e2e6cb62
-        ShadowMapRenderStages: {}
-        GBufferRenderStage: ref!! 895ba7e1-3bba-4b8b-bfde-ae18b5b39521
-        PostEffects: null
-        LightShafts: null
-        VRSettings:
-            Enabled: false
-            RequiredApis: {}
-            Overlays: {}
-        SubsurfaceScatteringBlurEffect: null
-        MSAALevel: None
-        MSAAResolver: {}
     81b6be4addcb0a1af442af56a37ad188*: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
         Id: 07e35bdb-8038-4172-82ac-f4b0e72dc7e4
         Clear: null
