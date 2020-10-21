@@ -241,6 +241,8 @@ Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
                 OutlineRenderTarget: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/OutlineRenderTexture
                 Scale: 1.0065
                 Color: {R: 0, G: 255, B: 0, A: 255}
+                OffsetVertical: 3.0
+                OffsetHorizontal: 3.0
             01d338078e9b21121ead0868932613dd: ~(Deleted)
             d39c5ddbf8b7d5ca02bafb6496b1cc3c: ~(Deleted)
     RenderMask: All

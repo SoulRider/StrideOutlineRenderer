@@ -29,20 +29,42 @@ namespace StrideOutlineRenderer.Renderers
             }
         }
 
+        public float OffsetVertical
+        {
+            get => verticalOffset;
+            set
+            {
+                verticalOffset = value;
+                up = -Vector2.UnitY * verticalOffset;
+                down = Vector2.UnitY * verticalOffset;
+            }
+        }
+
+        public float OffsetHorizontal
+        {
+            get => horizontalOffset;
+            set
+            {
+                horizontalOffset = value;
+                left = -Vector2.UnitX * horizontalOffset;
+                right = Vector2.UnitX * horizontalOffset;
+            }
+        }
+
         private SpriteBatch spriteBatch;
         private Vector2 textureOffset;
+        private float verticalOffset;
+        private float horizontalOffset;
 
         private Color highlightColor;
         private Color4 amplifiedColor;
 
-        private readonly Vector2 up = -Vector2.UnitY * VerticalOffset;
-        private readonly Vector2 down = Vector2.UnitY * VerticalOffset;
-        private readonly Vector2 left = -Vector2.UnitX * HorizontalOffset;
-        private readonly Vector2 right = Vector2.UnitX * HorizontalOffset;
+        private Vector2 up;
+        private Vector2 down;
+        private Vector2 left;
+        private Vector2 right;
 
         private const float ColorAmplifier = 10f;
-        private const float VerticalOffset = 2f;
-        private const float HorizontalOffset = 3f;
 
         public void ChangeColor(Color color)
         {

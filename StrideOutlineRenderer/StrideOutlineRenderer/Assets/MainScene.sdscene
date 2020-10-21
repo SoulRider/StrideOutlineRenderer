@@ -15,6 +15,7 @@ Hierarchy:
         - ref!! 4de57073-ffa7-4b5a-bc25-c042aa69ac95
         - ref!! f28ef5ba-1b3f-4323-8d6c-f14cde81d655
         - ref!! 026b5fc3-3e18-452e-996f-4c47f525efeb
+        - ref!! ff35e5cd-a7bf-474a-9154-5583ae57a25b
     Parts:
         -   Entity:
                 Id: 026b5fc3-3e18-452e-996f-4c47f525efeb
@@ -51,6 +52,7 @@ Hierarchy:
                         Id: e3515819-a0dd-4c6f-b37b-8ffba9f93fd2
                         Type: !LightSkybox
                             Skybox: d19e4c3d-a91e-4559-a450-27552fb4843a:Environment/Skybox
+                        Intensity: 0.35
         -   Folder: null
             Entity:
                 Id: 4de57073-ffa7-4b5a-bc25-c042aa69ac95
@@ -84,7 +86,7 @@ Hierarchy:
                     0e05d21276e9c59669ea8e894a59453d: !OutlineComponent
                         Id: 51412c27-5732-4580-8a22-1701e0abaa9a
                         Priority: 1
-                        HighlightColor: {R: 0, G: 0, B: 255, A: 255}
+                        HighlightColor: {R: 0, G: 0, B: 0, A: 255}
                         AlwaysOutlined: false
         -   Entity:
                 Id: 52103959-4e7c-4ca6-9c30-894669e9768d
@@ -122,29 +124,28 @@ Hierarchy:
                         AlwaysOutlined: false
         -   Entity:
                 Id: 584aeaa8-a990-47f0-bd58-a35e5a5f354e
-                Name: Directional light
+                Name: Point Light
                 Components:
                     e5aeeac9f599c8c2b5a3c6c410b3639a: !TransformComponent
                         Id: b2d40776-8852-4d7b-aba4-5623d987791d
-                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
-                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Position: {X: -5.0, Y: 7.0, Z: -5.0}
+                        Rotation: {X: 0.036708288, Y: -0.9014959, Z: -0.42414182, W: 0.07785465}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     96af700c6966aa3218149161c02d8e25: !LightComponent
                         Id: d77f907d-e39f-4dbe-be0e-29f029f866a8
-                        Type: !LightDirectional
+                        Type: !LightPoint
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Radius: 20.0
                             Shadow:
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf
-                                    FilterSize: Filter5x5
+                                    FilterSize: Filter7x7
                                 Size: Large
-                                DepthRange: {}
-                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
-                                ComputeTransmittance: false
-                                BiasParameters: {}
-                        Intensity: 10.0
+                                BiasParameters:
+                                    DepthBias: 0.1
+                        Intensity: 320.0
         -   Entity:
                 Id: 6b5b2c58-fa66-44bc-87c9-9f6ddfcbdbd5
                 Name: Ground
@@ -228,14 +229,33 @@ Hierarchy:
                     6d636d67a89881cdfa608c350e9c8106: !TransformComponent
                         Id: 3488a564-385d-451e-866b-ebe4860e8c78
                         Position: {X: -1.3049934, Y: 0.5, Z: -2.0}
-                        Rotation: {X: -0.0, Y: -0.17364818, Z: 0.0, W: 0.9848077}
+                        Rotation: {X: 0.0, Y: 0.37460652, Z: 0.0, W: 0.92718387}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     2da645735af2237269be1757eed61fb6: !ModelComponent
                         Id: fa83797d-a722-4b01-ac14-19a1a1903ac2
                         Model: 9be81d83-7d82-4b3d-8ee9-bde64682512a:Models/Cube
-                        Materials: {}
+                        Materials:
+                            7a49a00b9b482849b1c56975a61a8e0d~0: 63c746a3-c4df-45fb-aa2e-be1038c72477:Materials/Material
                     1aed35c54ba385690870d1349c62e0fe: !OutlineComponent
                         Id: 4241d50c-7c13-411b-9a01-2e9dfe065fa8
                         HighlightColor: {R: 0, G: 0, B: 0, A: 255}
                         AlwaysOutlined: true
+        -   Entity:
+                Id: ff35e5cd-a7bf-474a-9154-5583ae57a25b
+                Name: GameProfiler
+                Components:
+                    59b0cf5bce4294a3d562cb8b00f42c52: !TransformComponent
+                        Id: 0d248294-07cd-436e-85db-d10f6e2bf6fd
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9fa4bd00e672af0a5d04814d4d4faeaf: !StrideOutlineRenderer.GameProfiler,StrideOutlineRenderer
+                        Id: 37f3812b-002f-419f-ac73-2f69c415158e
+                        Enabled: true
+                        TextColor: {R: 144, G: 238, B: 144, A: 255}
+                        RefreshTime: 500.0
+                        SortingMode: ByTime
+                        FilteringMode: Fps
+                        ResultPage: 1

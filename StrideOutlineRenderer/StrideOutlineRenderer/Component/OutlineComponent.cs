@@ -1,5 +1,5 @@
-using System;
 using Stride.Core;
+using Stride.Core.Diagnostics;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Rendering;
@@ -44,16 +44,20 @@ namespace StrideOutlineRenderer.Component
 
         private void InitializeOutlineComponent()
         {
+            Log.ActivateLog(LogMessageType.Info);
+
             modelComponent = Entity.Get<ModelComponent>();
             if (modelComponent == null) 
             {
-                throw new NullReferenceException($"Model component not found on outline component.");
+                Log.Error($"Model component not found on outline component.");
+                //throw new NullReferenceException($"Model component not found on outline component.");
             }
 
             physicsComponent = Entity.Get<PhysicsComponent>();
-            if (physicsComponent == null) 
+            if (physicsComponent == null && AlwaysOutlined != true) 
             {
-                throw new NullReferenceException($"Collider component not found outline component.");
+                Log.Error($"Model component not found on outline component.");
+                //throw new NullReferenceException($"Collider component not found outline component.");
             }
 
             if (AlwaysOutlined)
