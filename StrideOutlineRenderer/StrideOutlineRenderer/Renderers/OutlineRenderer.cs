@@ -13,8 +13,10 @@ namespace StrideOutlineRenderer.Renderers
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         // ReSharper disable once MemberCanBePrivate.Global
         public Texture OutlineRenderTarget { get; set; }
+        public float Scale { get; set; } = 1.1f;
 
         private SpriteBatch spriteBatch;
+        private Vector2 textureOffset;
 
         protected override void InitializeCore()
         {
@@ -22,7 +24,8 @@ namespace StrideOutlineRenderer.Renderers
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            Services.GetService<IGame>().IsMouseVisible = false;
+            textureOffset = new Vector2((OutlineRenderTarget.Width - OutlineRenderTarget.Width * Scale) / 2,
+                (OutlineRenderTarget.Height - OutlineRenderTarget.Height * Scale) / 2);
         }
 
         protected override void DrawCore(RenderContext context, RenderDrawContext drawContext)
@@ -30,8 +33,8 @@ namespace StrideOutlineRenderer.Renderers
             spriteBatch.Begin(drawContext.GraphicsContext, depthStencilState: DepthStencilStates.None);
 
             // TODO adjust for offset
-            spriteBatch.Draw(OutlineRenderTarget, Vector2.Zero, Color.Red, 0, Vector2.Zero,2);
-            spriteBatch.Draw(OutlineRenderTarget, Vector2.Zero);
+            spriteBatch.Draw(OutlineRenderTarget, textureOffset, Color.Red, 0, Vector2.Zero,Scale);
+            //spriteBatch.Draw(OutlineRenderTarget, Vector2.Zero);
             spriteBatch.End();
         }
 
