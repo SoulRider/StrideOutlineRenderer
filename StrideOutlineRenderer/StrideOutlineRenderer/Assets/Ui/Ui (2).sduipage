@@ -1,25 +1,25 @@
 !UIPageAsset
-Id: 4b7e07fc-7da1-42be-903a-99ddcec90faa
+Id: b066635f-80d7-490d-ab27-8c5b213a3a6e
 SerializedVersion: {Stride: 2.1.0.1}
 Tags: []
 Design:
     Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
 Hierarchy:
     RootParts:
-        - !Grid ref!! a91162a1-b0a4-4b58-9b58-7c70a7855dfe
+        - !Grid ref!! 3e2281f8-3198-41b4-92f0-29ccda1a4e20
     Parts:
         -   UIElement: !Grid
-                Id: a91162a1-b0a4-4b58-9b58-7c70a7855dfe
+                Id: 3e2281f8-3198-41b4-92f0-29ccda1a4e20
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
                 Children:
-                    db8fa821d0c8f378d6f47689196e1b72: !ImageElement ref!! c1433a5c-c21d-409e-854c-d0012792c00a
+                    db8fa821d0c8f378d6f47689196e1b72: !ImageElement ref!! dbcbf50e-1914-4cc3-bcde-e94ede83e278
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
         -   UIElement: !ImageElement
-                Id: c1433a5c-c21d-409e-854c-d0012792c00a
+                Id: dbcbf50e-1914-4cc3-bcde-e94ede83e278
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 0.0
@@ -31,7 +31,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: 70c633ac-86b5-49ab-b613-b58d14675e80:Textures/OutputRenderTexture
+                    Texture: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/InputRenderTexture
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
                 StretchType: None

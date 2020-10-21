@@ -17,6 +17,7 @@ Hierarchy:
         - ref!! 026b5fc3-3e18-452e-996f-4c47f525efeb
         - ref!! ff35e5cd-a7bf-474a-9154-5583ae57a25b
         - ref!! 82229e83-e177-4d2e-859e-16a2b686ec75
+        - ref!! 96f250d2-be3f-44cd-9fc2-49868030e989
     Parts:
         -   Entity:
                 Id: 026b5fc3-3e18-452e-996f-4c47f525efeb
@@ -31,7 +32,8 @@ Hierarchy:
                     c2167a39487328e80f4542507d836fd3: !ModelComponent
                         Id: fafd5992-269d-4460-9344-a7f027796862
                         Model: 671217ad-8858-45e1-9b8c-fbf4c5fe1341:Models/Cone
-                        Materials: {}
+                        Materials:
+                            8875767c08107d5791a2bbd9d322466f~0: 63c746a3-c4df-45fb-aa2e-be1038c72477:Materials/Material
                     5fa0d8f95563f2f77e5367dc900d4542: !OutlineComponent
                         Id: 38bd87cb-58f2-451e-98fe-c84eb33ceef1
                         HighlightColor: {R: 0, G: 255, B: 0, A: 255}
@@ -54,7 +56,7 @@ Hierarchy:
                         Id: e3515819-a0dd-4c6f-b37b-8ffba9f93fd2
                         Type: !LightSkybox
                             Skybox: d19e4c3d-a91e-4559-a450-27552fb4843a:Environment/Skybox
-                        Intensity: 0.75
+                        Intensity: 0.25
         -   Folder: null
             Entity:
                 Id: 4de57073-ffa7-4b5a-bc25-c042aa69ac95
@@ -126,28 +128,28 @@ Hierarchy:
                         AlwaysOutlined: false
         -   Entity:
                 Id: 584aeaa8-a990-47f0-bd58-a35e5a5f354e
-                Name: Point Light
+                Name: Direction light
                 Components:
                     e5aeeac9f599c8c2b5a3c6c410b3639a: !TransformComponent
                         Id: b2d40776-8852-4d7b-aba4-5623d987791d
                         Position: {X: -5.0, Y: 7.0, Z: -5.0}
-                        Rotation: {X: 0.036708288, Y: -0.9014959, Z: -0.42414182, W: 0.07785465}
+                        Rotation: {X: -0.011020735, Y: -0.87166333, Z: -0.46804586, W: 0.14496441}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     96af700c6966aa3218149161c02d8e25: !LightComponent
                         Id: d77f907d-e39f-4dbe-be0e-29f029f866a8
-                        Type: !LightPoint
+                        Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
-                            Radius: 20.0
                             Shadow:
                                 Enabled: true
-                                Filter: !LightShadowMapFilterTypePcf
-                                    FilterSize: Filter7x7
-                                Size: Large
+                                Size: XLarge
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
                                 BiasParameters:
-                                    DepthBias: 0.1
-                        Intensity: 1000.0
+                                    DepthBias: 0.001
+                        Intensity: 4.0
         -   Entity:
                 Id: 6b5b2c58-fa66-44bc-87c9-9f6ddfcbdbd5
                 Name: Ground
@@ -174,7 +176,7 @@ Hierarchy:
                         Children: {}
                     9520202186edfd2cf239638be53a9d44: !UIComponent
                         Id: d1472385-766f-4537-923f-6cb654e84bf4
-                        Page: 4b7e07fc-7da1-42be-903a-99ddcec90faa:Ui/OutlineUi
+                        Page: 4b7e07fc-7da1-42be-903a-99ddcec90faa:Ui/Ui
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.0, Y: 1.0, Z: 1.0}
                         ResolutionStretch: FixedWidthFixedHeight
@@ -182,6 +184,27 @@ Hierarchy:
                         SnapText: false
                         IsFixedSize: true
                         RenderGroup: Group30
+        -   Folder: null
+            Entity:
+                Id: 96f250d2-be3f-44cd-9fc2-49868030e989
+                Name: OutlineUi
+                Components:
+                    803d97de8ebf8056e2f7300281d14d95: !TransformComponent
+                        Id: fa1fe51e-2a9f-470a-8b17-b778798785c8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9520202186edfd2cf239638be53a9d44: !UIComponent
+                        Id: 62e5585a-7dd0-4278-a3e9-4524bce11d8e
+                        Page: b066635f-80d7-490d-ab27-8c5b213a3a6e:Ui/Ui (2)
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        ResolutionStretch: FixedWidthFixedHeight
+                        IsBillboard: false
+                        SnapText: false
+                        IsFixedSize: true
+                        RenderGroup: Group31
         -   Entity:
                 Id: c88f95c8-96fe-43e9-98c3-5915ca2795e6
                 Name: Camera

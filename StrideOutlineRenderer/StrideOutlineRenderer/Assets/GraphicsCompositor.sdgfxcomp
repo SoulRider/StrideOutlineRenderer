@@ -155,8 +155,8 @@ SharedRenderers:
             Color: {R: 1.0, G: 1.0, B: 1.0}
         Bloom:
             Enabled*: true
-            Radius*: 10.0
-            Amount*: 0.25
+            Radius*: 5.0
+            Amount*: 0.15
             Distortion: {X: 1.0, Y: 1.0}
             Afterimage:
                 Enabled: false
@@ -166,7 +166,7 @@ SharedRenderers:
         LensFlare:
             Enabled*: false
         ColorTransforms:
-            Enabled*: true
+            Enabled*: false
             Transforms:
                 1e06f805f8b2e949a06c30d45fe413ef: !ToneMap
                     Enabled*: true
@@ -264,7 +264,14 @@ Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
                 Id: e6912fc5-18b5-4ad3-95fa-0b6e787ab1c0
                 Camera: ref!! d5b84192-0728-44a2-b2ea-6b3a3ff90e79
                 Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 07e35bdb-8038-4172-82ac-f4b0e72dc7e4
-                RenderMask: All
+                RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29, Group30
+            289239a19ed737b368720b690daf7d49*: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+                Id: f760ff47-3ce8-479f-bda5-fe2464273ae4
+                Camera: ref!! d5b84192-0728-44a2-b2ea-6b3a3ff90e79
+                Child: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
+                    Id: 322dabfe-ba1b-41ba-9fba-04dc7a49253b
+                    RenderStage: ref!! 4a9e701f-5494-47e2-b5a8-2824e2e6cb62
+                RenderMask: Group31
             01d338078e9b21121ead0868932613dd: ~(Deleted)
             d39c5ddbf8b7d5ca02bafb6496b1cc3c: ~(Deleted)
     RenderMask: All
