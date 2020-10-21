@@ -5,6 +5,7 @@ using Stride.Engine;
 using Stride.Rendering;
 using StrideOutlineRenderer.Renderers;
 // ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedAutoPropertyAccessor.Global
 
 namespace StrideOutlineRenderer.Component
 {
@@ -14,12 +15,14 @@ namespace StrideOutlineRenderer.Component
     [ComponentCategory("Model")]
     public class OutlineComponent : StartupScript
     {
-        public Color HighlightColor;
-        public bool AlwaysOutlined = false;
+        public bool AlwaysOutlined { get; set; } = false;
+        public Color HighlightColor { get; set; }
+        public RenderGroup OutlineRenderGroup { get; set; } = RenderGroup.Group10; // highlighted render group
 
         private ModelComponent modelComponent;
         private PhysicsComponent physicsComponent;
         private IOutlineRenderer outlineRenderer;
+        private RenderGroup configuredRenderGroup; // un-highlighted render group
 
         public override void Start()
         {
@@ -33,13 +36,13 @@ namespace StrideOutlineRenderer.Component
                 outlineRenderer = Services.GetService<IOutlineRenderer>();
             }
 
-            modelComponent.RenderGroup = RenderGroup.Group10;
+            modelComponent.RenderGroup = OutlineRenderGroup;
             outlineRenderer?.ChangeColor(HighlightColor);
         }
 
         public void Disable()
         {
-            modelComponent.RenderGroup = RenderGroup.Group0;
+            modelComponent.RenderGroup = configuredRenderGroup;
         }
 
         private void InitializeOutlineComponent()
@@ -52,7 +55,12 @@ namespace StrideOutlineRenderer.Component
                 Log.Error($"Model component not found on outline component.");
                 //throw new NullReferenceException($"Model component not found on outline component.");
             }
+            else
+            {
+                configuredRenderGroup = modelComponent.RenderGroup;
+            }
 
+            // Model outline highlighting uses physics ray casting in BasicCameraController
             physicsComponent = Entity.Get<PhysicsComponent>();
             if (physicsComponent == null && AlwaysOutlined != true) 
             {

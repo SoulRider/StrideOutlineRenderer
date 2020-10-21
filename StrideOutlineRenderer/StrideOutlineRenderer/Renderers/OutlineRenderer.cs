@@ -3,7 +3,7 @@ using Stride.Core.Mathematics;
 using Stride.Graphics;
 using Stride.Rendering;
 using Stride.Rendering.Compositing;
-
+// ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable once UnusedAutoPropertyAccessor.Global
 
@@ -33,7 +33,7 @@ namespace StrideOutlineRenderer.Renderers
         private Color highlightColor;
         private Color4 amplifiedColor;
 
-        private const float ColorAmplifier = 10f;
+        private const float ColorAmplifier = 10f; // completely saturate the sprite
 
         public void ChangeColor(Color color)
         {
@@ -48,6 +48,8 @@ namespace StrideOutlineRenderer.Renderers
 
         protected override void DrawCore(RenderContext context, RenderDrawContext drawContext)
         {
+            /* This class is basically a render texture color tinting utility, it's used to prep for post-fx bloom */
+
             if (InputRenderTexture == null || OutputRenderTexture == null)
                 return;
 
@@ -65,14 +67,12 @@ namespace StrideOutlineRenderer.Renderers
         protected override void Destroy()
         {
             base.Destroy();
-
             spriteBatch.Dispose();
         }
 
         private void InitializeOutlineRenderer()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
             Services.AddService(this as IOutlineRenderer);
         }
     }

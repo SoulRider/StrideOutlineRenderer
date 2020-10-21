@@ -36,8 +36,9 @@ Hierarchy:
                             8875767c08107d5791a2bbd9d322466f~0: 63c746a3-c4df-45fb-aa2e-be1038c72477:Materials/Material
                     5fa0d8f95563f2f77e5367dc900d4542: !OutlineComponent
                         Id: 38bd87cb-58f2-451e-98fe-c84eb33ceef1
-                        HighlightColor: {R: 0, G: 255, B: 0, A: 255}
                         AlwaysOutlined: true
+                        HighlightColor: {R: 0, G: 255, B: 0, A: 255}
+                        OutlineRenderGroup: Group10
         -   Entity:
                 Id: 3d2bde9c-c24b-4617-9dda-a35e6bb27f1c
                 Name: Skybox
@@ -71,6 +72,7 @@ Hierarchy:
                     d79d6ab6721eb0f714d88fc673073b19: !ModelComponent
                         Id: 0dc4e7dc-e8fe-4bc3-a937-9ba9325cfbe3
                         Model: 29957f69-bb1e-460e-8a69-69b0f803b623:Models/Sphere
+                        RenderGroup: Group9
                         Materials: {}
                     d91c50f439536da9b6134a5d9bbf5441: !StaticColliderComponent
                         Id: 073b8056-7854-4180-9624-05c14f19e3c4
@@ -90,8 +92,9 @@ Hierarchy:
                     0e05d21276e9c59669ea8e894a59453d: !OutlineComponent
                         Id: 51412c27-5732-4580-8a22-1701e0abaa9a
                         Priority: 1
-                        HighlightColor: {R: 0, G: 255, B: 0, A: 255}
                         AlwaysOutlined: false
+                        HighlightColor: {R: 0, G: 255, B: 0, A: 255}
+                        OutlineRenderGroup: Group10
         -   Entity:
                 Id: 52103959-4e7c-4ca6-9c30-894669e9768d
                 Name: Sphere
@@ -105,6 +108,7 @@ Hierarchy:
                     d79d6ab6721eb0f714d88fc673073b19: !ModelComponent
                         Id: 9ac69e67-93bc-48b9-bdbd-917fbb9de9eb
                         Model: 29957f69-bb1e-460e-8a69-69b0f803b623:Models/Sphere
+                        RenderGroup: Group9
                         Materials: {}
                     cd44cf7cfb5ea07fd1f78485b838e35c: !StaticColliderComponent
                         Id: 107b4353-9be9-4351-a53a-a27e3b7c51a1
@@ -124,8 +128,9 @@ Hierarchy:
                     cbdbe198c1a799848e20557b7749b4f3: !OutlineComponent
                         Id: 58b1d32b-db0d-4c9f-92f5-e3da0540d27a
                         Priority: 1
-                        HighlightColor: {R: 255, G: 0, B: 0, A: 255}
                         AlwaysOutlined: false
+                        HighlightColor: {R: 255, G: 0, B: 0, A: 255}
+                        OutlineRenderGroup: Group10
         -   Entity:
                 Id: 584aeaa8-a990-47f0-bd58-a35e5a5f354e
                 Name: Direction light
@@ -149,7 +154,7 @@ Hierarchy:
                                 ComputeTransmittance: false
                                 BiasParameters:
                                     DepthBias: 0.001
-                        Intensity: 4.0
+                        Intensity: 5.0
         -   Entity:
                 Id: 6b5b2c58-fa66-44bc-87c9-9f6ddfcbdbd5
                 Name: Ground
@@ -166,7 +171,7 @@ Hierarchy:
                         Materials: {}
         -   Entity:
                 Id: 82229e83-e177-4d2e-859e-16a2b686ec75
-                Name: OutlineUi
+                Name: OutlineUiOutput
                 Components:
                     803d97de8ebf8056e2f7300281d14d95: !TransformComponent
                         Id: b328a408-4900-46d6-9dab-7fdff30c718c
@@ -176,7 +181,7 @@ Hierarchy:
                         Children: {}
                     9520202186edfd2cf239638be53a9d44: !UIComponent
                         Id: d1472385-766f-4537-923f-6cb654e84bf4
-                        Page: 4b7e07fc-7da1-42be-903a-99ddcec90faa:Ui/Ui
+                        Page: 4b7e07fc-7da1-42be-903a-99ddcec90faa:Ui/OutlineUiOutput
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.0, Y: 1.0, Z: 1.0}
                         ResolutionStretch: FixedWidthFixedHeight
@@ -187,7 +192,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 96f250d2-be3f-44cd-9fc2-49868030e989
-                Name: OutlineUi
+                Name: OutlineUiBloomInput
                 Components:
                     803d97de8ebf8056e2f7300281d14d95: !TransformComponent
                         Id: fa1fe51e-2a9f-470a-8b17-b778798785c8
@@ -197,7 +202,7 @@ Hierarchy:
                         Children: {}
                     9520202186edfd2cf239638be53a9d44: !UIComponent
                         Id: 62e5585a-7dd0-4278-a3e9-4524bce11d8e
-                        Page: b066635f-80d7-490d-ab27-8c5b213a3a6e:Ui/Ui (2)
+                        Page: b066635f-80d7-490d-ab27-8c5b213a3a6e:Ui/OutlineUiInput
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.0, Y: 1.0, Z: 1.0}
                         ResolutionStretch: FixedWidthFixedHeight
@@ -247,6 +252,7 @@ Hierarchy:
                     d79d6ab6721eb0f714d88fc673073b19: !ModelComponent
                         Id: ab72c3e8-345d-4ad5-8fa6-c5b1b3de0942
                         Model: 29957f69-bb1e-460e-8a69-69b0f803b623:Models/Sphere
+                        RenderGroup: Group9
                         Materials: {}
                     1b569456208fe3b74f277d4c8c66bdbb: !StaticColliderComponent
                         Id: 1104ffbf-d9c3-46a0-8f4e-207796281261
@@ -266,8 +272,9 @@ Hierarchy:
                     93b50310a8e6efa04b5fc6718992065d: !OutlineComponent
                         Id: 39094514-1ba1-4d3b-9e8d-d9335bc45623
                         Priority: 1
-                        HighlightColor: {R: 0, G: 168, B: 255, A: 255}
                         AlwaysOutlined: false
+                        HighlightColor: {R: 0, G: 168, B: 255, A: 255}
+                        OutlineRenderGroup: Group10
         -   Entity:
                 Id: f28ef5ba-1b3f-4323-8d6c-f14cde81d655
                 Name: Cube
@@ -285,8 +292,9 @@ Hierarchy:
                             7a49a00b9b482849b1c56975a61a8e0d~0: 63c746a3-c4df-45fb-aa2e-be1038c72477:Materials/Material
                     1aed35c54ba385690870d1349c62e0fe: !OutlineComponent
                         Id: 4241d50c-7c13-411b-9a01-2e9dfe065fa8
-                        HighlightColor: {R: 0, G: 255, B: 0, A: 255}
                         AlwaysOutlined: true
+                        HighlightColor: {R: 0, G: 255, B: 0, A: 255}
+                        OutlineRenderGroup: Group10
         -   Entity:
                 Id: ff35e5cd-a7bf-474a-9154-5583ae57a25b
                 Name: GameProfiler
