@@ -34,7 +34,7 @@ Hierarchy:
                         Materials: {}
                     5fa0d8f95563f2f77e5367dc900d4542: !OutlineComponent
                         Id: 38bd87cb-58f2-451e-98fe-c84eb33ceef1
-                        HighlightColor: {R: 0, G: 0, B: 0, A: 255}
+                        HighlightColor: {R: 0, G: 255, B: 0, A: 255}
                         AlwaysOutlined: true
         -   Entity:
                 Id: 3d2bde9c-c24b-4617-9dda-a35e6bb27f1c
@@ -49,11 +49,12 @@ Hierarchy:
                     c69dc956bf18cd331a72d98f0a5e26e5: !BackgroundComponent
                         Id: 4d60eb8d-44f5-466f-aebe-e693d1186011
                         Texture: e1969b7e-cc86-4de7-bd30-3e90806587fd:Textures/Skybox texture
+                        RenderGroup: Group30
                     4ce24ae1044c3bb9576fe8bd8ea9b9bf: !LightComponent
                         Id: e3515819-a0dd-4c6f-b37b-8ffba9f93fd2
                         Type: !LightSkybox
                             Skybox: d19e4c3d-a91e-4559-a450-27552fb4843a:Environment/Skybox
-                        Intensity: 0.35
+                        Intensity: 0.75
         -   Folder: null
             Entity:
                 Id: 4de57073-ffa7-4b5a-bc25-c042aa69ac95
@@ -87,7 +88,7 @@ Hierarchy:
                     0e05d21276e9c59669ea8e894a59453d: !OutlineComponent
                         Id: 51412c27-5732-4580-8a22-1701e0abaa9a
                         Priority: 1
-                        HighlightColor: {R: 0, G: 0, B: 0, A: 255}
+                        HighlightColor: {R: 0, G: 255, B: 0, A: 255}
                         AlwaysOutlined: false
         -   Entity:
                 Id: 52103959-4e7c-4ca6-9c30-894669e9768d
@@ -146,7 +147,7 @@ Hierarchy:
                                 Size: Large
                                 BiasParameters:
                                     DepthBias: 0.1
-                        Intensity: 320.0
+                        Intensity: 1000.0
         -   Entity:
                 Id: 6b5b2c58-fa66-44bc-87c9-9f6ddfcbdbd5
                 Name: Ground
@@ -163,7 +164,7 @@ Hierarchy:
                         Materials: {}
         -   Entity:
                 Id: 82229e83-e177-4d2e-859e-16a2b686ec75
-                Name: UI
+                Name: OutlineUi
                 Components:
                     803d97de8ebf8056e2f7300281d14d95: !TransformComponent
                         Id: b328a408-4900-46d6-9dab-7fdff30c718c
@@ -173,7 +174,7 @@ Hierarchy:
                         Children: {}
                     9520202186edfd2cf239638be53a9d44: !UIComponent
                         Id: d1472385-766f-4537-923f-6cb654e84bf4
-                        Page: 4b7e07fc-7da1-42be-903a-99ddcec90faa:Ui/Ui
+                        Page: 4b7e07fc-7da1-42be-903a-99ddcec90faa:Ui/OutlineUi
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.0, Y: 1.0, Z: 1.0}
                         ResolutionStretch: FixedWidthFixedHeight
@@ -261,7 +262,7 @@ Hierarchy:
                             7a49a00b9b482849b1c56975a61a8e0d~0: 63c746a3-c4df-45fb-aa2e-be1038c72477:Materials/Material
                     1aed35c54ba385690870d1349c62e0fe: !OutlineComponent
                         Id: 4241d50c-7c13-411b-9a01-2e9dfe065fa8
-                        HighlightColor: {R: 0, G: 0, B: 0, A: 255}
+                        HighlightColor: {R: 0, G: 255, B: 0, A: 255}
                         AlwaysOutlined: true
         -   Entity:
                 Id: ff35e5cd-a7bf-474a-9154-5583ae57a25b
