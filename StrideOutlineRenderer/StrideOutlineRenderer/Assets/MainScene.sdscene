@@ -13,7 +13,27 @@ Hierarchy:
         - ref!! 52103959-4e7c-4ca6-9c30-894669e9768d
         - ref!! edea6d27-335f-46bf-8fe5-49853f658bee
         - ref!! 4de57073-ffa7-4b5a-bc25-c042aa69ac95
+        - ref!! f28ef5ba-1b3f-4323-8d6c-f14cde81d655
+        - ref!! 026b5fc3-3e18-452e-996f-4c47f525efeb
     Parts:
+        -   Entity:
+                Id: 026b5fc3-3e18-452e-996f-4c47f525efeb
+                Name: Cone
+                Components:
+                    be646746715cc467a77b3459d24ad0b6: !TransformComponent
+                        Id: 80664248-ff7f-4cb7-858d-9c07d1103fd1
+                        Position: {X: 1.0, Y: 0.66, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.25, Z: 1.0}
+                        Children: {}
+                    c2167a39487328e80f4542507d836fd3: !ModelComponent
+                        Id: fafd5992-269d-4460-9344-a7f027796862
+                        Model: 671217ad-8858-45e1-9b8c-fbf4c5fe1341:Models/Cone
+                        Materials: {}
+                    5fa0d8f95563f2f77e5367dc900d4542: !OutlineComponent
+                        Id: 38bd87cb-58f2-451e-98fe-c84eb33ceef1
+                        HighlightColor: {R: 0, G: 0, B: 0, A: 255}
+                        AlwaysOutlined: true
         -   Entity:
                 Id: 3d2bde9c-c24b-4617-9dda-a35e6bb27f1c
                 Name: Skybox
@@ -45,8 +65,27 @@ Hierarchy:
                     d79d6ab6721eb0f714d88fc673073b19: !ModelComponent
                         Id: 0dc4e7dc-e8fe-4bc3-a937-9ba9325cfbe3
                         Model: 29957f69-bb1e-460e-8a69-69b0f803b623:Models/Sphere
-                        RenderGroup: Group10
                         Materials: {}
+                    d91c50f439536da9b6134a5d9bbf5441: !StaticColliderComponent
+                        Id: 073b8056-7854-4180-9624-05c14f19e3c4
+                        CollisionGroup: CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            06990da0c9b2e122757fa656ebc50a04: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    0e05d21276e9c59669ea8e894a59453d: !OutlineComponent
+                        Id: 51412c27-5732-4580-8a22-1701e0abaa9a
+                        Priority: 1
+                        HighlightColor: {R: 0, G: 0, B: 255, A: 255}
+                        AlwaysOutlined: false
         -   Entity:
                 Id: 52103959-4e7c-4ca6-9c30-894669e9768d
                 Name: Sphere
@@ -60,8 +99,27 @@ Hierarchy:
                     d79d6ab6721eb0f714d88fc673073b19: !ModelComponent
                         Id: 9ac69e67-93bc-48b9-bdbd-917fbb9de9eb
                         Model: 29957f69-bb1e-460e-8a69-69b0f803b623:Models/Sphere
-                        RenderGroup: Group10
                         Materials: {}
+                    cd44cf7cfb5ea07fd1f78485b838e35c: !StaticColliderComponent
+                        Id: 107b4353-9be9-4351-a53a-a27e3b7c51a1
+                        CollisionGroup: CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            06990da0c9b2e122757fa656ebc50a04: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    cbdbe198c1a799848e20557b7749b4f3: !OutlineComponent
+                        Id: 58b1d32b-db0d-4c9f-92f5-e3da0540d27a
+                        Priority: 1
+                        HighlightColor: {R: 255, G: 0, B: 0, A: 255}
+                        AlwaysOutlined: false
         -   Entity:
                 Id: 584aeaa8-a990-47f0-bd58-a35e5a5f354e
                 Name: Directional light
@@ -107,8 +165,8 @@ Hierarchy:
                 Components:
                     9516103bbbc72046a8001c971747ce4d: !TransformComponent
                         Id: 5c43a6a2-9e11-4f1d-a832-4a4cd2088b58
-                        Position: {X: 0.0, Y: 5.0, Z: -4.0}
-                        Rotation: {X: -3.1906794E-08, Y: -0.90630776, Z: -0.42261827, W: 6.8424335E-08}
+                        Position: {X: 0.0, Y: 5.0, Z: 3.0}
+                        Rotation: {X: -0.42261827, Y: 1.1679143E-15, Z: 2.5046004E-15, W: 0.90630776}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     3edf03127fb0ac37b1dde459a233b46b: !CameraComponent
@@ -125,6 +183,9 @@ Hierarchy:
                         KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
                         MouseRotationSpeed: {X: 1.0, Y: 1.0}
                         TouchRotationSpeed: {X: 1.0, Y: 0.7}
+                    bb5eccf191dd4debde847e13fb14e3c7: !StrideOutlineRenderer.Renderers.OutlineRenderTargetClear,StrideOutlineRenderer
+                        Id: 9fb76648-e561-4f82-9142-ac36b9b59957
+                        OutlineRenderTarget: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/OutlineRenderTexture
         -   Folder: null
             Entity:
                 Id: edea6d27-335f-46bf-8fe5-49853f658bee
@@ -139,5 +200,42 @@ Hierarchy:
                     d79d6ab6721eb0f714d88fc673073b19: !ModelComponent
                         Id: ab72c3e8-345d-4ad5-8fa6-c5b1b3de0942
                         Model: 29957f69-bb1e-460e-8a69-69b0f803b623:Models/Sphere
-                        RenderGroup: Group10
                         Materials: {}
+                    1b569456208fe3b74f277d4c8c66bdbb: !StaticColliderComponent
+                        Id: 1104ffbf-d9c3-46a0-8f4e-207796281261
+                        CollisionGroup: CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            06990da0c9b2e122757fa656ebc50a04: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    93b50310a8e6efa04b5fc6718992065d: !OutlineComponent
+                        Id: 39094514-1ba1-4d3b-9e8d-d9335bc45623
+                        Priority: 1
+                        HighlightColor: {R: 0, G: 168, B: 255, A: 255}
+                        AlwaysOutlined: false
+        -   Entity:
+                Id: f28ef5ba-1b3f-4323-8d6c-f14cde81d655
+                Name: Cube
+                Components:
+                    6d636d67a89881cdfa608c350e9c8106: !TransformComponent
+                        Id: 3488a564-385d-451e-866b-ebe4860e8c78
+                        Position: {X: -1.3049934, Y: 0.5, Z: -2.0}
+                        Rotation: {X: -0.0, Y: -0.17364818, Z: 0.0, W: 0.9848077}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    2da645735af2237269be1757eed61fb6: !ModelComponent
+                        Id: fa83797d-a722-4b01-ac14-19a1a1903ac2
+                        Model: 9be81d83-7d82-4b3d-8ee9-bde64682512a:Models/Cube
+                        Materials: {}
+                    1aed35c54ba385690870d1349c62e0fe: !OutlineComponent
+                        Id: 4241d50c-7c13-411b-9a01-2e9dfe065fa8
+                        HighlightColor: {R: 0, G: 0, B: 0, A: 255}
+                        AlwaysOutlined: true

@@ -1,16 +1,20 @@
-﻿using System;
+using System;
+using System.Linq;
 using Stride.Core;
+using Stride.Core.Collections;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Input;
+using Stride.Physics;
+using StrideOutlineRenderer.Component;
 
 namespace StrideOutlineRenderer
 {
     /// <summary>
-    /// A script that allows to move and rotate an entity through keyboard, mouse and touch input to provide basic camera navigation.
+    /// A script that allows to move and rotate an outlineComponent through keyboard, mouse and touch input to provide basic camera navigation.
     /// </summary>
     /// <remarks>
-    /// The entity can be moved using W, A, S, D, Q and E, arrow keys, a gamepad's left stick or dragging/scaling using multi-touch.
+    /// The outlineComponent can be moved using W, A, S, D, Q and E, arrow keys, a gamepad's left stick or dragging/scaling using multi-touch.
     /// Rotation is achieved using the Numpad, the mouse while holding the right mouse button, a gamepad's right stick, or dragging using single-touch.
     /// </remarks>
     public class BasicCameraController : SyncScript
@@ -21,6 +25,10 @@ namespace StrideOutlineRenderer
         private Vector3 translation;
         private float yaw;
         private float pitch;
+
+        private CameraComponent cameraComponent;
+        private readonly FastList<HitResult> resultList = new FastList<HitResult>();
+        private readonly FastList<OutlineComponent> outlinedComponents = new FastList<OutlineComponent>();
 
         public bool Gamepad { get; set; } = false;
 
@@ -49,6 +57,8 @@ namespace StrideOutlineRenderer
                 Input.Gestures.Add(new GestureConfigDrag());
                 Input.Gestures.Add(new GestureConfigComposite());
             }
+
+            cameraComponent = Entity.Get<CameraComponent>();
         }
 
         public override void Update()
@@ -74,7 +84,7 @@ namespace StrideOutlineRenderer
                 //    we will have travelled one whole unit in a second.
                 //    If you don't use deltaTime your speed will be dependant on the amount of frames rendered
                 //    on screen which often are inconsistent, meaning that if the player has performance issues,
-                //    this entity will move around slower.
+                //    this outlineComponent will move around slower.
                 float speed = 1f * deltaTime;
 
                 Vector3 dir = Vector3.Zero;
@@ -142,7 +152,7 @@ namespace StrideOutlineRenderer
                     // normalizing the vector ensures that whichever direction the player chooses, that direction
                     // will always be at most one unit in length.
                     // We're keeping dir as is if isn't longer than one to retain sub unit movement:
-                    // a stick not entirely pushed forward should make the entity move slower.
+                    // a stick not entirely pushed forward should make the outlineComponent move slower.
                     if (dir.Length() > 1f)
                     {
                         dir = Vector3.Normalize(dir);
@@ -209,6 +219,23 @@ namespace StrideOutlineRenderer
 
                 if (Input.HasMouse)
                 {
+                    // Ray cast into the scene for outline highlighting
+                    if (Raycast(Input.MousePosition, CollisionFilterGroupFlags.CustomFilter10, 
+                        out var _, out var outlineComponent))
+                    {
+                        outlineComponent?.Enable();
+                        if (!outlinedComponents.Contains(outlineComponent))
+                        {
+                            outlinedComponents.Add(outlineComponent);
+                        }
+                    }
+                    else
+                    {
+                        foreach ( var outlinedComponent in outlinedComponents ) {
+                            outlinedComponent.Disable();
+                        }
+                    }
+
                     // Rotate with mouse
                     if (Input.IsMouseButtonDown(MouseButton.Right))
                     {
@@ -276,6 +303,36 @@ namespace StrideOutlineRenderer
 
             // Yaw around global up-vector, pitch and roll in local space
             Entity.Transform.Rotation *= Quaternion.RotationAxis(right, pitch) * Quaternion.RotationAxis(upVector, yaw);
+        }
+
+        private bool Raycast(Vector2 mouseScreenPos, CollisionFilterGroupFlags targetGroup, out Vector3 point, out OutlineComponent outlineComponent)
+        {
+            var invViewProj = Matrix.Invert(cameraComponent.ViewProjectionMatrix);
+            Vector3 sPos;
+            sPos.X = mouseScreenPos.X * 2f - 1f;
+            sPos.Y = 1f - mouseScreenPos.Y * 2f;
+            sPos.Z = 0f;
+
+            var vectorNear = Vector3.Transform(sPos, invViewProj);
+            vectorNear /= vectorNear.W;
+            sPos.Z = 1f;
+            var vectorFar = Vector3.Transform(sPos, invViewProj);
+            vectorFar /= vectorFar.W;
+
+            resultList.Clear();
+            this.GetSimulation().RaycastPenetrating(vectorNear.XYZ(), vectorFar.XYZ(),
+                resultList, CollisionFilterGroups.DefaultFilter, targetGroup);
+
+            if (!resultList.Any())
+            {
+                point = Vector3.Zero;
+                outlineComponent = null;
+                return false;
+            }
+
+            point = resultList.First().Point;
+            outlineComponent = resultList.First().Collider.Entity.Get<OutlineComponent>();
+            return true;
         }
     }
 }

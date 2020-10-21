@@ -166,7 +166,7 @@ SharedRenderers:
         LensFlare:
             Enabled*: false
         ColorTransforms:
-            Enabled*: false
+            Enabled*: true
             Transforms:
                 1e06f805f8b2e949a06c30d45fe413ef: !ToneMap
                     Enabled*: false
@@ -206,7 +206,7 @@ SharedRenderers:
         TransparentRenderStage: ref!! 4a9e701f-5494-47e2-b5a8-2824e2e6cb62
         ShadowMapRenderStages: {}
         GBufferRenderStage: ref!! 895ba7e1-3bba-4b8b-bfde-ae18b5b39521
-        PostEffects: null
+        PostEffects: !PostProcessingEffects ref!! 94522f89-4ed2-4e74-abdf-703308a73b29
         LightShafts: null
         VRSettings:
             Enabled: false
