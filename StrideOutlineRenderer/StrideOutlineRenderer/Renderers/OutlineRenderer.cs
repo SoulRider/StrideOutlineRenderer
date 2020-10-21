@@ -18,7 +18,6 @@ namespace StrideOutlineRenderer.Renderers
 
 
         public Texture OutlineRenderTarget { get; set; }
-        public PostProcessingEffects PostProcessingEffects { get; set; }
         public float Scale { get; set; } = 1.01f;
 
         public Color Color
