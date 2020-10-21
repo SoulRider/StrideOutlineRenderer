@@ -16,6 +16,7 @@ Hierarchy:
         - ref!! f28ef5ba-1b3f-4323-8d6c-f14cde81d655
         - ref!! 026b5fc3-3e18-452e-996f-4c47f525efeb
         - ref!! ff35e5cd-a7bf-474a-9154-5583ae57a25b
+        - ref!! 82229e83-e177-4d2e-859e-16a2b686ec75
     Parts:
         -   Entity:
                 Id: 026b5fc3-3e18-452e-996f-4c47f525efeb
@@ -161,6 +162,26 @@ Hierarchy:
                         Model: 9ec3bc4e-26c8-4a74-ac99-9304e47258f7:Models/Ground
                         Materials: {}
         -   Entity:
+                Id: 82229e83-e177-4d2e-859e-16a2b686ec75
+                Name: UI
+                Components:
+                    803d97de8ebf8056e2f7300281d14d95: !TransformComponent
+                        Id: b328a408-4900-46d6-9dab-7fdff30c718c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9520202186edfd2cf239638be53a9d44: !UIComponent
+                        Id: d1472385-766f-4537-923f-6cb654e84bf4
+                        Page: 4b7e07fc-7da1-42be-903a-99ddcec90faa:Ui/Ui
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        ResolutionStretch: FixedWidthFixedHeight
+                        IsBillboard: false
+                        SnapText: false
+                        IsFixedSize: true
+                        RenderGroup: Group30
+        -   Entity:
                 Id: c88f95c8-96fe-43e9-98c3-5915ca2795e6
                 Name: Camera
                 Components:
@@ -186,7 +207,8 @@ Hierarchy:
                         TouchRotationSpeed: {X: 1.0, Y: 0.7}
                     bb5eccf191dd4debde847e13fb14e3c7: !StrideOutlineRenderer.Renderers.OutlineRenderTargetClear,StrideOutlineRenderer
                         Id: 9fb76648-e561-4f82-9142-ac36b9b59957
-                        OutlineRenderTarget: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/OutlineRenderTexture
+                        InputRenderTexture: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/InputRenderTexture
+                        OutputRenderTexture: 70c633ac-86b5-49ab-b613-b58d14675e80:Textures/OutputRenderTexture
         -   Folder: null
             Entity:
                 Id: edea6d27-335f-46bf-8fe5-49853f658bee

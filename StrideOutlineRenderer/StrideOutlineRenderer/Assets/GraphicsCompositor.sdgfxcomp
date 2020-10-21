@@ -228,7 +228,7 @@ Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
                 Camera: ref!! d5b84192-0728-44a2-b2ea-6b3a3ff90e79
                 Child: !Stride.Rendering.Compositing.RenderTextureSceneRenderer,Stride.Rendering
                     Id: d5225f3d-f209-486e-841e-6faf42d13224
-                    RenderTexture: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/OutlineRenderTexture
+                    RenderTexture: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/InputRenderTexture
                     Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! e57e7f50-df98-44b3-bf0a-bcfa20fca322
                 RenderMask: Group10
             b187708d21aff3666abb775d5b7bcb69*: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
@@ -238,7 +238,8 @@ Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
                 RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29
             3ebf680e28aad44452c5449b25848854*: !StrideOutlineRenderer.Renderers.OutlineRenderer,StrideOutlineRenderer
                 Id: 6d662952-2b89-4ab6-b368-9dd5de44f6c1
-                OutlineRenderTarget: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/OutlineRenderTexture
+                InputRenderTexture: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/InputRenderTexture
+                OutputRenderTexture: 70c633ac-86b5-49ab-b613-b58d14675e80:Textures/OutputRenderTexture
                 Scale: 1.0065
                 Color: {R: 0, G: 255, B: 0, A: 255}
                 OffsetVertical: 3.0

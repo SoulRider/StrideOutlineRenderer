@@ -1,11 +1,31 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 16
+# Visual Studio Version 16
 VisualStudioVersion = 16.0.0.0
 MinimumVisualStudioVersion = 16.0.0.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrideOutlineRenderer.Windows", "StrideOutlineRenderer.Windows\StrideOutlineRenderer.Windows.csproj", "{0A361411-915A-4333-B7CD-EE716006CF38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrideOutlineRenderer.Windows", "StrideOutlineRenderer.Windows\StrideOutlineRenderer.Windows.csproj", "{0A361411-915A-4333-B7CD-EE716006CF38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrideOutlineRenderer", "StrideOutlineRenderer\StrideOutlineRenderer.csproj", "{C980ACAB-0764-4EA3-B728-C9B87261DB29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrideOutlineRenderer", "StrideOutlineRenderer\StrideOutlineRenderer.csproj", "{C980ACAB-0764-4EA3-B728-C9B87261DB29}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A361411-915A-4333-B7CD-EE716006CF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A361411-915A-4333-B7CD-EE716006CF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A361411-915A-4333-B7CD-EE716006CF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A361411-915A-4333-B7CD-EE716006CF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C980ACAB-0764-4EA3-B728-C9B87261DB29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C980ACAB-0764-4EA3-B728-C9B87261DB29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C980ACAB-0764-4EA3-B728-C9B87261DB29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C980ACAB-0764-4EA3-B728-C9B87261DB29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {895CBDD9-E881-4CDF-876D-68AB9D68061A}
+	EndGlobalSection
 EndGlobal
