@@ -4,19 +4,24 @@ using Stride.Games;
 using Stride.Graphics;
 using Stride.Rendering;
 using Stride.Rendering.Compositing;
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable once UnusedAutoPropertyAccessor.Global
 
 namespace StrideOutlineRenderer.Renderers
 {
     [Display("Outline Renderer")]
     public class OutlineRenderer : SceneRendererBase
     {
-        // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        // ReSharper disable once MemberCanBePrivate.Global
+
+
         public Texture OutlineRenderTarget { get; set; }
         public float Scale { get; set; } = 1.1f;
+        public Color Color { get; set; } = Color.Red;
 
         private SpriteBatch spriteBatch;
         private Vector2 textureOffset;
+
+        private static readonly Color ColorMultiplier = new Color(10f, 10f, 10f);
 
         protected override void InitializeCore()
         {
@@ -33,7 +38,7 @@ namespace StrideOutlineRenderer.Renderers
             spriteBatch.Begin(drawContext.GraphicsContext, depthStencilState: DepthStencilStates.None);
 
             // TODO adjust for offset
-            spriteBatch.Draw(OutlineRenderTarget, textureOffset, Color.Red, 0, Vector2.Zero,Scale);
+            spriteBatch.Draw(OutlineRenderTarget, textureOffset, Color, 0, Vector2.Zero,Scale);
             //spriteBatch.Draw(OutlineRenderTarget, Vector2.Zero);
             spriteBatch.End();
         }
