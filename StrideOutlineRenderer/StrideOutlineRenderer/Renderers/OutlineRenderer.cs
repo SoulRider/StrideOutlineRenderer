@@ -15,10 +15,8 @@ namespace StrideOutlineRenderer.Renderers
     [Display("Outline Renderer")]
     public class OutlineRenderer : SceneRendererBase
     {
-
-
         public Texture OutlineRenderTarget { get; set; }
-        public float Scale { get; set; } = 1.01f;
+        public float Scale { get; set; } = 1.005f;
 
         public Color Color
         {
@@ -40,7 +38,14 @@ namespace StrideOutlineRenderer.Renderers
         private Color color;
         private Color4 amplifiedColor;
 
+        private readonly Vector2 up = -Vector2.UnitY * VerticalOffset;
+        private readonly Vector2 down = Vector2.UnitY * VerticalOffset;
+        private readonly Vector2 left = -Vector2.UnitX * HorizontalOffset;
+        private readonly Vector2 right = Vector2.UnitX * HorizontalOffset;
+
         private const float ColorAmplifier = 10f;
+        private const float VerticalOffset = 2f;
+        private const float HorizontalOffset = 3f;
 
         protected override void InitializeCore()
         {
@@ -48,18 +53,22 @@ namespace StrideOutlineRenderer.Renderers
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            textureOffset = new Vector2((OutlineRenderTarget.Width - OutlineRenderTarget.Width * Scale) / 2,
-                (OutlineRenderTarget.Height - OutlineRenderTarget.Height * Scale) / 2);
-
-            
-
+            textureOffset = new Vector2((OutlineRenderTarget.Width - OutlineRenderTarget.Width * Scale) / 2f,
+                (OutlineRenderTarget.Height - OutlineRenderTarget.Height * Scale) / 2f);
         }
 
         protected override void DrawCore(RenderContext context, RenderDrawContext drawContext)
         {
             spriteBatch.Begin(drawContext.GraphicsContext, depthStencilState: DepthStencilStates.None);
             
-            spriteBatch.Draw(OutlineRenderTarget, textureOffset, amplifiedColor, 0, Vector2.Zero,Scale);
+            spriteBatch.Draw(OutlineRenderTarget, up, amplifiedColor, 0, Vector2.Zero, 1);
+            spriteBatch.Draw(OutlineRenderTarget, down, amplifiedColor, 0, Vector2.Zero, 1);
+
+            spriteBatch.Draw(OutlineRenderTarget, left, amplifiedColor, 0, Vector2.Zero, 1);
+            spriteBatch.Draw(OutlineRenderTarget, right, amplifiedColor, 0, Vector2.Zero, 1);
+
+            spriteBatch.Draw(OutlineRenderTarget, textureOffset, amplifiedColor, 0, Vector2.Zero, Scale);
+
             spriteBatch.Draw(OutlineRenderTarget, Vector2.Zero);
 
             spriteBatch.End();

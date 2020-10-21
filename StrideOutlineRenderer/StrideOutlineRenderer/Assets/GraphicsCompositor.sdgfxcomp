@@ -156,20 +156,22 @@ SharedRenderers:
         Bloom:
             Enabled*: true
             Radius*: 10.0
-            Amount*: 0.4
+            Amount*: 0.3
             Distortion: {X: 1.0, Y: 1.0}
             Afterimage:
                 Enabled: false
         LightStreak:
-            Enabled*: true
+            Enabled*: false
             Attenuation: 0.7
         LensFlare:
-            Enabled*: true
+            Enabled*: false
         ColorTransforms:
-            Enabled*: true
+            Enabled*: false
             Transforms:
                 1e06f805f8b2e949a06c30d45fe413ef: !ToneMap
+                    Enabled*: false
                     Operator: !ToneMapHejl2Operator {}
+                    AutoKeyValue*: true
                 c57351444609d14ea258b3f511ec8a74: !FilmGrain
                     Enabled: false
                 e86e22e9a5d65545b8b55fca26e0afee: !Vignetting
@@ -180,6 +182,25 @@ SharedRenderers:
     4f343d64cc39ae51a28a8e19f6b98986*: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
         Id: e57e7f50-df98-44b3-bf0a-bcfa20fca322
         Clear: null
+        LightProbes: true
+        OpaqueRenderStage: ref!! d092fe52-708d-4357-9433-3bfd30c3b13b
+        TransparentRenderStage: ref!! 4a9e701f-5494-47e2-b5a8-2824e2e6cb62
+        ShadowMapRenderStages: {}
+        GBufferRenderStage: ref!! 895ba7e1-3bba-4b8b-bfde-ae18b5b39521
+        PostEffects: null
+        LightShafts: null
+        VRSettings:
+            Enabled: false
+            RequiredApis: {}
+            Overlays: {}
+        SubsurfaceScatteringBlurEffect: null
+        MSAALevel: None
+        MSAAResolver: {}
+    22ac779d1b6a8efd8f1339a2c4622386*: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
+        Id: 0d46ff52-37a4-4be0-974e-d5667409ee0b
+        Clear:
+            Id: 71582abd-0f3f-403d-a641-53fe020df0d9
+            Color: {R: 0.40392157, G: 0.4117647, B: 0.43529412, A: 1.0}
         LightProbes: true
         OpaqueRenderStage: ref!! d092fe52-708d-4357-9433-3bfd30c3b13b
         TransparentRenderStage: ref!! 4a9e701f-5494-47e2-b5a8-2824e2e6cb62
@@ -213,12 +234,12 @@ Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
             b187708d21aff3666abb775d5b7bcb69*: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
                 Id: b12f0583-2af0-4fca-b3a3-faf12c96658c
                 Camera: ref!! d5b84192-0728-44a2-b2ea-6b3a3ff90e79
-                Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 99f54c39-7e26-4c66-9598-ceae06ab54d0
-                RenderMask: All
+                Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 0d46ff52-37a4-4be0-974e-d5667409ee0b
+                RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29
             3ebf680e28aad44452c5449b25848854*: !StrideOutlineRenderer.Renderers.OutlineRenderer,StrideOutlineRenderer
                 Id: 6d662952-2b89-4ab6-b368-9dd5de44f6c1
                 OutlineRenderTarget: 92c6c5dc-34b9-4869-a94d-288d145da27e:Textures/OutlineRenderTexture
-                Scale: 1.01
+                Scale: 1.0065
                 Color: {R: 0, G: 255, B: 0, A: 255}
             01d338078e9b21121ead0868932613dd: ~(Deleted)
             d39c5ddbf8b7d5ca02bafb6496b1cc3c: ~(Deleted)
