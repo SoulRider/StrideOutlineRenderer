@@ -30,7 +30,7 @@ Compositor:
  
 Compositor Expanded:
 
-<img src="Screenshots/Compositor_Expanded.png">
+<img src="Screenshots/CompositorExpanded.png">
   
 Compositor Render Texture (Item 0):
 
