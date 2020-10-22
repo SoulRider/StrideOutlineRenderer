@@ -10,7 +10,7 @@ Stride Outline Renderer - Renderer for Rendering 3D Object (Model Component) Out
 - Performance should scale (horizontally) directly with PostFX Bloom process
 
 ## How it works:
-- Uses physics ray casting in player controller to activate outline on objects, requires colliders
+- Uses physics ray casting in camera controller to activate outline on objects, requires colliders
 - Model components are set to RenderGroup9, when they are highlighted they are changed to RenderGroup10 (arbitrary assignments)
 - Model components have an OutlineComponent attached to them, assigning a highlight color and outline RenderGroup (RenderGroup10)
 - RenderTextureSceneRenderer in Compositor writes only RenderGroup10 to a render texture (InputRenderTexture)
