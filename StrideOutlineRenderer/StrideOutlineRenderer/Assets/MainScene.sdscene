@@ -192,7 +192,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 96f250d2-be3f-44cd-9fc2-49868030e989
-                Name: OutlineUiBloomInput
+                Name: OutlineUiInput
                 Components:
                     803d97de8ebf8056e2f7300281d14d95: !TransformComponent
                         Id: fa1fe51e-2a9f-470a-8b17-b778798785c8
