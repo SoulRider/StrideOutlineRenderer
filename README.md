@@ -4,7 +4,7 @@ Stride Outline Renderer - Renderer for Rendering 3D Object Outlines
  <img src="Screenshots/StrideOutlineRenderer.png">
 
 ## Features:
-- Halo/Bloom/Blend outine effect for model components (this is not a shader)
+- Halo/Bloom/Blend outline effect for model components (this is not a shader)
 - Enable outline on model components by assigning specified render group at runtime
 - Disable outline on model components by assigning specified render group at runtime
 - Permanently enable outline on model components by assigning specified render group at runtime and "AlwaysOutlined"
