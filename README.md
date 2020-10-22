@@ -43,15 +43,11 @@ Compositor Shared Renderer to Post FX Omit Group 9 (Item 2):
 
 <img src="Screenshots/OmitGroupSharedRenderer.png">
 
-Compositor Group 9 Single Stag Renderer:
-
-<img src="Screenshots/OmitGroupSharedRenderer.png">
-
-Compositor Group 9 Single Stag Renderer:
+Compositor Group 9 Single Stag Renderer (Item 3):
 
 <img src="Screenshots/Group9SingleStage.png">
 
-Compositor Group 31 Single Stage Renderer:
+Compositor Group 31 Single Stage Renderer (Item 4):
 
 <img src="Screenshots/Group31SingleStage.png">
  
