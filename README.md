@@ -1,5 +1,5 @@
 # StrideOutlineRenderer
-Stride Outline Renderer - Renderer for Rendering 3D Object Outlines
+Stride Outline Renderer - Renderer for Rendering 3D Object (Model Component) Outlines
 
  <img src="Screenshots/StrideOutlineRenderer.png">
 
