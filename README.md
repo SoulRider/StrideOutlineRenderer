@@ -42,7 +42,7 @@ Compositor Outline Renderer (Item 1):
 
 Compositor Shared Renderer to Post FX Omit Group 9 (Item 2):
 
-<img src="Screenshots/OmiGroupSharedRenderer.png">
+<img src="Screenshots/OmitGroupSharedRenderer.png">
 
 Compositor Group 9 Single Stag Renderer:
 
