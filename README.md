@@ -3,7 +3,7 @@ Stride Outline Renderer - Renderer for Rendering 3D Object Outlines
 
  <img src="Screenshots/StrideOutlineRenderer.png">
 
-##Features:
+## Features:
 - Halo/Bloom/Blend outine effect for model components (this is not a shader)
 - Enable outline on model components by assigning specified render group at runtime
 - Disable outline on model components by assigning specified render group at runtime
@@ -11,6 +11,7 @@ Stride Outline Renderer - Renderer for Rendering 3D Object Outlines
 - Performance should scale (horizontally) directly with PostFX Bloom process
 
 ## How it works:
+- Uses physics ray casting in player controller to activate outline on objects, requires colliders
 - Model components are set to RenderGroup9, when they are highlighted they are changed to RenderGroup10
 - Model components have an OutlineComponent attached to them, assigning a highlight color and outline RenderGroup
 - RenderTextureSceneRenderer in Compositor writes only RenderGroup10 to a render texture (InputRenderTexture)
