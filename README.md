@@ -5,8 +5,7 @@ Stride Outline Renderer - Renderer for Rendering 3D Object (Model Component) Out
 
 ## Features:
 - Halo/Bloom/Blend outline effect for model components (this is not a shader)
-- Enable outline on model components by assigning render group at runtime
-- Disable outline on model components by assigning render group at runtime
+- Enable/Disable outline on model components by changing render group at runtime
 - Permanently enable outline on model components by assigning render group on Outline Component and enable "AlwaysOutlined"
 - Performance should scale (horizontally) directly with PostFX Bloom process
 
