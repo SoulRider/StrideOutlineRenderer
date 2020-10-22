@@ -50,7 +50,7 @@ Compositor Group 9 Single Stag Renderer:
 
 Compositor Group 9 Single Stag Renderer:
 
-<img src="Screenshots/OmitGroupSharedRenderer.png">
+<img src="Screenshots/Group9SingleStage.png">
 
 Compositor Group 31 Single Stage Renderer:
 
