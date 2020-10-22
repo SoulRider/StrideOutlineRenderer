@@ -64,7 +64,7 @@ namespace StrideOutlineRenderer.Component
             physicsComponent = Entity.Get<PhysicsComponent>();
             if (physicsComponent == null && AlwaysOutlined != true) 
             {
-                Log.Error($"Model component not found on outline component.");
+                Log.Error($"Physics collider component not found on outline component.");
                 //throw new NullReferenceException($"Collider component not found outline component.");
             }
 
