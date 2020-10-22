@@ -60,6 +60,6 @@ Compositor Group 31 Single Stage Renderer:
 - You could combine the RenderTextureSceneRenderer functionality into the OutlineRenderer
 
 ## Other Implementations
-- Check my profile, I will also release the non-bloom version with a conmbined Renderer (RenderTexture and SpriteBatcher).
+- Check my GitHub profile, I will also release the non-bloom version with a combined Renderer (RenderTexture and SpriteBatcher).
 
 
