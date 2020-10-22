@@ -21,30 +21,39 @@ Stride Outline Renderer - Renderer for Rendering 3D Object Outlines
 - InputRenderTexture is excluded from PostFX, but added as a SingleStageRenderer for Transparent pass "on top of" bloom effect
 
 Scene:
+
 <img src="Screenshots/Scene.png">
 
 Compositor:
+
  <img src="Screenshots/Compositor.png">
  
 Compositor Expanded:
-<img src="Screenshots/CompositorExpanded.png">
+
+<img src="Screenshots/Compositor_Expanded.png">
   
 Compositor Render Texture (Item 0):
+
 <img src="Screenshots/GroupRenderToTexture.png">
 
 Compositor Outline Renderer (Item 1):
+
 <img src="Screenshots/OutlineRenderer.png">
 
 Compositor Shared Renderer to Post FX Omit Group 9 (Item 2):
+
 <img src="Screenshots/OmiGroupSharedRenderer.png">
 
-Compositor Group 9 Single Stag Renderere:
+Compositor Group 9 Single Stag Renderer:
+
 <img src="Screenshots/OmitGroupSharedRenderer.png">
 
-Compositor Group 9 Single Stag Renderere:
+Compositor Group 9 Single Stag Renderer:
+
 <img src="Screenshots/OmitGroupSharedRenderer.png">
 
 Compositor Group 31 Single Stage Renderer:
+
 <img src="Screenshots/Group31SingleStage.png">
  
 ## Potential Improvements
